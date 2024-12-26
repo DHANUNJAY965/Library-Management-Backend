@@ -1,15 +1,9 @@
-// import express from 'express';
 const express = require('express');
-// import cors from 'cors';
 const cors = require('cors');
 const morgan = require('morgan');
-// import morgan from 'morgan';
 const rateLimit=require('express-rate-limit');
-// import rateLimit from 'express-rate-limit';
-// import dotenv from 'dotenv';
 const dotenv=require('dotenv');
 const mongoose=require('mongoose');
-// import mongoose from 'mongoose';
 const bookRoutes=require("./routes/bookRoutes");
 
 dotenv.config();
