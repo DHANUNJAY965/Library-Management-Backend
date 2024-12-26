@@ -30,6 +30,37 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // Routes
 app.use('/api/books', bookRoutes);
+app.get("/", (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Library Management</title>
+      <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+        }
+        h1 {
+          text-align: center;
+          color: #333;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Library Management API connected successfully</h1>
+    </body>
+    </html>
+  `);
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
